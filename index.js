@@ -9,9 +9,20 @@ const questions = [
     {
         type: 'input',
         message: 'Enter the name of the Employee:',
-        name: 'name',
-    }
+        name: name,
+    },
 
+    {
+        type: 'input',
+        message: 'Enter the ID number of the Employee',
+        name: id,
+    },
+
+    {
+        type: 'input',
+        message: 'Enter the email of the Employee',
+        name: email,
+    },
 ];
 
 function initialize() {
@@ -27,5 +38,7 @@ function initialize() {
 }
 
 initialize()
+
+const response = new Employee(this.name, this.id, this.email)
 
 module.exports = initialize;
