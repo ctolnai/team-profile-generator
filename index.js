@@ -1,27 +1,27 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const Employee = require('./lib/Employee');
-const Manager = require('./lib/Manager');
-const Engineer = require('./lib/Engineer');
-const Intern = require('./lib/Intern');
+// const Employee = require('./lib/Employee');
+// const Manager = require('./lib/Manager');
+// const Engineer = require('./lib/Engineer');
+// const Intern = require('./lib/Intern');
 
 const questions = [
     {
         type: 'input',
         message: 'Enter the name of the Employee:',
-        name: name,
+        name: 'name',
     },
 
     {
         type: 'input',
         message: 'Enter the ID number of the Employee',
-        name: id,
+        name: 'id',
     },
 
     {
         type: 'input',
         message: 'Enter the email of the Employee',
-        name: email,
+        name: 'email',
     },
 ];
 
@@ -39,6 +39,6 @@ function initialize() {
 
 initialize()
 
-const response = new Employee(this.name, this.id, this.email)
+// const response = new Employee(this.name, this.id, this.email)
 
 module.exports = initialize;
