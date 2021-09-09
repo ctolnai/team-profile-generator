@@ -9,7 +9,7 @@ const generateHTML = require('./generateHTML');
 const questions = [
     {
         type: 'list',
-        message: 'What type of Employee is this?',
+        message: 'What type of Employee would you like to add?',
         name: 'role',
         choices: ['Manager', 'Engineer', 'Intern']
     },
@@ -32,11 +32,12 @@ function createManager() {
     inquirer
         .prompt(managerQuestions)
         .then((response) => {
-            let log = `${response.role}.html`;
-
+            let log = `${response.role}.md`;
+            if (response.another == true) { initialize() }
+            else(
             fs.writeFile(log, generateHTML(response), (err) =>
-                err ? console.log(err) : console.log('You have added a Manager to the team')
-            );
+                err ? console.log(err) : console.log('Thank you for creating your team.')
+            ));
         })
 };
 
@@ -63,17 +64,25 @@ const managerQuestions = [
         message: 'Enter the office number of the Manager:',
         name: 'officeNumber',
     },
+    {
+        type: 'confirm',
+        message: 'Do you want to add another Employee?',
+        name: 'another',
+        default: false,
+
+    },
 ]
 
 function createEngineer() {
     inquirer
         .prompt(engineerQuestions)
         .then((response) => {
-            let log = `${response.role}.html`;
-
+            let log = `MYTEAM.md`;
+            if (response.another == true) { initialize() }
+            else(
             fs.writeFile(log, generateHTML(response), (err) =>
-                err ? console.log(err) : console.log('You have added an Engineer to the team')
-            );
+                err ? console.log(err) : console.log('Thank you for creating your team.')
+            ));
         })
 };
 
@@ -100,6 +109,13 @@ const engineerQuestions = [
         message: 'Enter the github username of the Engineer:',
         name: 'github',
     },
+    {
+        type: 'confirm',
+        message: 'Do you want to add another Employee?',
+        name: 'another',
+        default: false,
+
+    },
 ]
 
 
@@ -108,10 +124,11 @@ function createIntern() {
         .prompt(internQuestions)
         .then((response) => {
             let log = `${response.role}.html`;
-
+            if (response.another == true) { initialize() }
+            else(
             fs.writeFile(log, generateHTML(response), (err) =>
-                err ? console.log(err) : console.log('You have added an Engineer to the team')
-            );
+                err ? console.log(err) : console.log('Thank you for creating your team.')
+            ));
         })
 };
 
@@ -138,6 +155,13 @@ const internQuestions = [
         type: 'input',
         message: 'Enter the school that the Intern goes to:',
         name: 'github',
+    },
+    {
+        type: 'confirm',
+        message: 'Do you want to add another Employee?',
+        name: 'another',
+        default: false,
+
     },
 ]
 
