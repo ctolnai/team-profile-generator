@@ -39,6 +39,5 @@ function initialize() {
 
 initialize()
 
-// const response = new Employee(this.name, this.id, this.email)
 
 module.exports = initialize;
