@@ -10,7 +10,7 @@ function generateHTML(response) {
         switch (response[i].role) {
             case "Manager":
                 fred.push(`<div class="card" style="width: 18rem;">
-               <div class="card-header">
+               <div class="card-header text-white bg-primary">
                <p>${response[i].name}</p>
                <p>${response[i].role}</p>
                </div>
@@ -22,9 +22,9 @@ function generateHTML(response) {
              </div>`)
 
                 break;
-                    case "Engineer":
-                        fred.push(`<div class="card" style="width: 18rem;">
-                       <div class="card-header">
+            case "Engineer":
+                fred.push(`<div class="card" style="width: 18rem;">
+                       <div class="card-header text-white bg-primary">
                        <p>${response[i].name}</p>
                        <p>${response[i].role}</p>
                        </div>
@@ -34,16 +34,28 @@ function generateHTML(response) {
                          <li class="list-group-item">${response[i].github}</li>
                        </ul>
                      </div>`)
-
-                    default:
-                        break;
-                }
-
-
-
+                break;
+            case "Intern":
+                fred.push(`<div class="card" style="width: 18rem;">
+                        <div class="card-header text-white bg-primary">
+                        <p>${response[i].name}</p>
+                        <p>${response[i].role}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">${response[i].id}</li>
+                          <li class="list-group-item">${response[i].email}</li>
+                          <li class="list-group-item">${response[i].school}</li>
+                        </ul>
+                      </div>`)
+            default:
+                break;
         }
 
-        return `<!DOCTYPE html>
+
+
+    }
+
+    return `<!DOCTYPE html>
     <html lang="en">
     
     <head>
@@ -57,9 +69,9 @@ function generateHTML(response) {
     
     
     <body>
-    <nav class="navbar navbar-dark bg-primary ">
+    <nav class="navbar navbar-dark bg-primary">
         <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1">My Team</span>
+            <span class="navbar-brand mb-0 h1 mx-auto">My Team</span>
         </div>
     </nav>
     ${fred.join("")}
@@ -74,7 +86,7 @@ function generateHTML(response) {
 </html > `
 
 
-    }
+}
 
-    module.exports = generateHTML;
+module.exports = generateHTML;
 
