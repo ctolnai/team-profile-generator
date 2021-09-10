@@ -1,7 +1,8 @@
-const initialize = require('./index')
+const initialize = require('./index');
+
 
 function generateHTML(response){
-    return `<p>${this.role}<p>`
+    return `# ${response.name}`
 }
 
 module.exports = generateHTML;
