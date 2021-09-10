@@ -49,7 +49,7 @@ function initialize() {
             // console.log (teamArray);
             if (response.another == true) { anotherEmployee() }
             else(
-            fs.writeFile('./dist/index.html', generateHTML(response), (err) =>
+            fs.writeFile('./dist/index.html', generateHTML(teamArray), (err) =>
                 err ? console.log(err) : console.log('Thank you for creating your team.')
             ));
         })
@@ -83,7 +83,7 @@ function createEngineer() {
             // console.log (teamArray);
             if (response.another == true) { anotherEmployee() }
             else(
-            fs.writeFile('./dist/index.html', generateHTML(response), (err) =>
+            fs.writeFile('./dist/index.html', generateHTML(teamArray), (err) =>
                 err ? console.log(err) : console.log('Thank you for creating your team.')
             ));
         })
@@ -131,7 +131,7 @@ function createIntern() {
             // console.log (teamArray);
             if (response.another == true) { anotherEmployee() }
             else(
-            fs.writeFile('./dist/index.html', generateHTML(response), (err) =>
+            fs.writeFile('./dist/index.html', generateHTML(teamArray), (err) =>
                 err ? console.log(err) : console.log('Thank you for creating your team.')
             ));
         })
