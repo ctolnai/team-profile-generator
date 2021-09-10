@@ -6,6 +6,8 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const generateHTML = require('./generateHTML');
 
+const teamArray = []
+
 const managerQuestions = [
     {
         type: 'input',
@@ -42,10 +44,12 @@ function initialize() {
     inquirer
         .prompt(managerQuestions)
         .then((response) => {
-            let log = `MYTEAM.md`;
+            const manager = new Manager(response.name, response.id, response.email, response.officeNumber)
+            teamArray.push(manager);
+            // console.log (teamArray);
             if (response.another == true) { anotherEmployee() }
             else(
-            fs.writeFile(log, generateHTML(response), (err) =>
+            fs.writeFile('./dist/index.html', generateHTML(response), (err) =>
                 err ? console.log(err) : console.log('Thank you for creating your team.')
             ));
         })
@@ -74,10 +78,12 @@ function createEngineer() {
     inquirer
         .prompt(engineerQuestions)
         .then((response) => {
-            let log = `MYTEAM.md`;
+            const engineer = new Engineer(response.name, response.id, response.email, response.github)
+            teamArray.push(engineer);
+            // console.log (teamArray);
             if (response.another == true) { anotherEmployee() }
             else(
-            fs.writeFile(log, generateHTML(response), (err) =>
+            fs.writeFile('./dist/index.html', generateHTML(response), (err) =>
                 err ? console.log(err) : console.log('Thank you for creating your team.')
             ));
         })
@@ -120,10 +126,12 @@ function createIntern() {
     inquirer
         .prompt(internQuestions)
         .then((response) => {
-            let log = `MYTEAM.md`;
+            const intern = new Intern(response.name, response.id, response.email, response.school)
+            teamArray.push(intern);
+            // console.log (teamArray);
             if (response.another == true) { anotherEmployee() }
             else(
-            fs.writeFile(log, generateHTML(response), (err) =>
+            fs.writeFile('./dist/index.html', generateHTML(response), (err) =>
                 err ? console.log(err) : console.log('Thank you for creating your team.')
             ));
         })
