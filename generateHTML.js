@@ -71,13 +71,14 @@ function generateHTML(response) {
     <body>
     <nav class="navbar navbar-dark bg-primary">
         <div class="container-fluid">
-            <span class="navbar-brand mb-0 h1 mx-auto">My Team</span>
+            <span class="navbar-brand mb-0 h1 mx-auto "style="font-size: 3rem;">My Team</span>
         </div>
     </nav>
+    <div class="cards d-flex justify-content-center">
     ${fred.join("")}
 
 
-
+    </div>
         <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity = "sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
     crossorigin = "anonymous" ></script >
