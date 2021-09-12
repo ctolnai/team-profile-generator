@@ -9,42 +9,42 @@ function generateHTML(response) {
     for (let i = 0; i < response.length; i++) {
         switch (response[i].role) {
             case "Manager":
-                fred.push(`<div class="card" style="width: 18rem;">
+                fred.push(`<div class="card m-2" style="width: 14rem;">
                <div class="card-header text-white bg-primary">
                <p>${response[i].name}</p>
-               <p>${response[i].role}</p>
+               <p>👨‍💼${response[i].role}</p>
                </div>
                <ul class="list-group list-group-flush">
-                 <li class="list-group-item">${response[i].id}</li>
-                 <li class="list-group-item">${response[i].email}</li>
-                 <li class="list-group-item">${response[i].officeNumber}</li>
+                 <li class="list-group-item">ID: ${response[i].id}</li>
+                 <li class="list-group-item">Email: ${response[i].email}</li>
+                 <li class="list-group-item">Office Numnber: ${response[i].officeNumber}</li>
                </ul>
              </div>`)
 
                 break;
             case "Engineer":
-                fred.push(`<div class="card" style="width: 18rem;">
+                fred.push(`<div class="card m-2" style="width: 14rem;">
                        <div class="card-header text-white bg-primary">
                        <p>${response[i].name}</p>
-                       <p>${response[i].role}</p>
+                       <p>👨‍💻${response[i].role}</p>
                        </div>
                        <ul class="list-group list-group-flush">
-                         <li class="list-group-item">${response[i].id}</li>
-                         <li class="list-group-item">${response[i].email}</li>
-                         <li class="list-group-item">${response[i].github}</li>
+                         <li class="list-group-item">ID: ${response[i].id}</li>
+                         <li class="list-group-item">Email: ${response[i].email}</li>
+                         <li class="list-group-item">Github: ${response[i].github}</li>
                        </ul>
                      </div>`)
                 break;
             case "Intern":
-                fred.push(`<div class="card" style="width: 18rem;">
+                fred.push(`<div class="card m-2" style="width: 14rem;">
                         <div class="card-header text-white bg-primary">
                         <p>${response[i].name}</p>
-                        <p>${response[i].role}</p>
+                        <p>🧑‍🎓${response[i].role}</p>
                         </div>
                         <ul class="list-group list-group-flush">
-                          <li class="list-group-item">${response[i].id}</li>
-                          <li class="list-group-item">${response[i].email}</li>
-                          <li class="list-group-item">${response[i].school}</li>
+                          <li class="list-group-item">ID: ${response[i].id}</li>
+                          <li class="list-group-item">Email: ${response[i].email}</li>
+                          <li class="list-group-item">School: ${response[i].school}</li>
                         </ul>
                       </div>`)
             default:
