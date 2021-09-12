@@ -159,7 +159,7 @@ const internQuestions = [
     {
         type: 'input',
         message: 'Enter the school that the Intern goes to:',
-        name: 'github',
+        name: 'school',
     },
     {
         type: 'confirm',
