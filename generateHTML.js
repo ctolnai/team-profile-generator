@@ -11,8 +11,8 @@ function generateHTML(response) {
             case "Manager":
                 fred.push(`<div class="card m-2" style="width: 14rem;">
                <div class="card-header text-white bg-primary">
-               <p>${response[i].name}</p>
-               <p>👨‍💼${response[i].role}</p>
+               <p class="h2">${response[i].name}</p>
+               <p class="h3">👨‍💼 ${response[i].role}</p>
                </div>
                <ul class="list-group list-group-flush">
                  <li class="list-group-item">ID: ${response[i].id}</li>
@@ -25,8 +25,8 @@ function generateHTML(response) {
             case "Engineer":
                 fred.push(`<div class="card m-2" style="width: 14rem;">
                        <div class="card-header text-white bg-primary">
-                       <p>${response[i].name}</p>
-                       <p>👨‍💻${response[i].role}</p>
+                       <p class="h2">${response[i].name}</p>
+                       <p class="h3">👨‍💻 ${response[i].role}</p>
                        </div>
                        <ul class="list-group list-group-flush">
                          <li class="list-group-item">ID: ${response[i].id}</li>
@@ -38,8 +38,8 @@ function generateHTML(response) {
             case "Intern":
                 fred.push(`<div class="card m-2" style="width: 14rem;">
                         <div class="card-header text-white bg-primary">
-                        <p>${response[i].name}</p>
-                        <p>🧑‍🎓${response[i].role}</p>
+                        <p class="h2">${response[i].name}</p>
+                        <p class="h3">🧑‍🎓 ${response[i].role}</p>
                         </div>
                         <ul class="list-group list-group-flush">
                           <li class="list-group-item">ID: ${response[i].id}</li>
