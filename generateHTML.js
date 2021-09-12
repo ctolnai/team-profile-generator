@@ -31,7 +31,7 @@ function generateHTML(response) {
                        <ul class="list-group list-group-flush">
                          <li class="list-group-item">ID: ${response[i].id}</li>
                          <li class="list-group-item">Email: <a href="mailto:${response[i].email}">${response[i].email}</a></li>
-                         <li class="list-group-item">Github: ${response[i].github}</li>
+                         <li class="list-group-item">Github: <a href="http://www.github.com/${response[i].github}">${response[i].github}</a></li>
                        </ul>
                      </div>`)
                 break;
@@ -74,7 +74,7 @@ function generateHTML(response) {
             <span class="navbar-brand mb-0 h1 mx-auto "style="font-size: 3rem;">My Team</span>
         </div>
     </nav>
-    <div class="cards d-flex justify-content-center">
+    <div class="cards p-3 d-flex justify-content-center">
     ${fred.join("")}
 
 
