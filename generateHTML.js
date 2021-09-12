@@ -16,7 +16,7 @@ function generateHTML(response) {
                </div>
                <ul class="list-group list-group-flush">
                  <li class="list-group-item">ID: ${response[i].id}</li>
-                 <li class="list-group-item">Email: <a href="mailto:${response[i].email}"></a>${response[i].email}</li>
+                 <li class="list-group-item">Email: <a href="mailto:${response[i].email}">${response[i].email}</a></li>
                  <li class="list-group-item">Office Numnber: ${response[i].officeNumber}</li>
                </ul>
              </div>`)
@@ -30,7 +30,7 @@ function generateHTML(response) {
                        </div>
                        <ul class="list-group list-group-flush">
                          <li class="list-group-item">ID: ${response[i].id}</li>
-                         <li class="list-group-item">Email: <a href="mailto:${response[i].email}"></a>${response[i].email}</li>
+                         <li class="list-group-item">Email: <a href="mailto:${response[i].email}">${response[i].email}</a></li>
                          <li class="list-group-item">Github: ${response[i].github}</li>
                        </ul>
                      </div>`)
@@ -43,7 +43,7 @@ function generateHTML(response) {
                         </div>
                         <ul class="list-group list-group-flush">
                           <li class="list-group-item">ID: ${response[i].id}</li>
-                          <li class="list-group-item">Email: <a href="mailto:${response[i].email}"></a>${response[i].email}</li>
+                          <li class="list-group-item">Email: <a href="mailto:${response[i].email}">${response[i].email}</a></li>
                           <li class="list-group-item">School: ${response[i].school}</li>
                         </ul>
                       </div>`)
