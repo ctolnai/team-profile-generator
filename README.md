@@ -12,8 +12,9 @@
   ## Installation
   You will need to install NPM in order to run this program. It uses Inquirier and Jest.
   ## Usage
-  Please see attached screenshot of html page as a reference:
+  Please see attached screenshot of html page as a reference and a walkthrough video:
   <img src="screenshot.png">
+  https://drive.google.com/file/d/1z72llJNON0ZsQonGsQnOslZJyazTUDNW/view
   ## Questions
   https://github.com/ctolnai
 
